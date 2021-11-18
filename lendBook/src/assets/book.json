@@ -1,0 +1,33 @@
+{
+    "category":[
+        {
+            "id": 1,
+            "name": "fiction"
+        },
+        {
+            "id": 2,
+            "name": "Horror"
+        },
+        {
+            "id": 3,
+            "name": "nonfiction"
+        }        
+    ],
+    "books":[
+        {
+            "id":1,
+            "name":"xyz",
+            "cate_id":1
+        },
+        {
+            "id":2,
+            "name":"abc",
+            "cate_id":2
+        },
+        {
+            "id":3,
+            "name":"klm",
+            "cate_id":1
+        }
+    ]
+}
