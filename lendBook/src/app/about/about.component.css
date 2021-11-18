@@ -1,0 +1,155 @@
+  /*----ABOUT US----
+  .aMargin {
+    
+    font-family: poppins;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.about-section {
+    background: url('../../assets/Images/about_img.jpg') no-repeat left;
+    background-size: 100%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.aInner-container {
+    width: 70%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 80px;
+}
+
+    .aInner-container h1 {
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+        background: linear-gradient(#491008b2,#e6ea01);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+.aText {
+    font-size: 15px;
+    color: black;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width:1200px) {
+    .aInner-container {
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .about-section {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+
+    .aInner-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about-section {
+        padding: 0;
+    }
+
+    .aInner-container {
+        padding: 30px;
+    }
+}*/
+
+
+
+
+/* about us */
+#feature {
+width: 100%;
+padding-top: 10px;
+padding-bottom: 115px;
+
+}
+.title-text {
+text-align: center;
+padding-bottom: 40px;
+}
+ .title-text p {
+margin: auto;
+font-size: 30px;
+color: #f5a81c;
+} 
+.title-text h1 {
+font-size: 50px;
+}
+.feature-box {
+width: 80%;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+text-align: center;
+}
+.features {
+flex-basis: 50%;
+}
+.features-img {
+flex-basis: 50%;
+margin: auto;
+} 
+.features-img img {
+width: 70%;
+border-radius: 10px;
+}
+
+.features-desc {
+display: flex;
+align-items: center;
+margin-bottom: 40px;
+}
+.feature-icon .fas {
+width: 50px;
+height: 50px;
+font-size: 140px;
+line-height: 50px;
+border-radius: 8px;
+color: #f5a81c;
+border: 1px solid #f5a81c;
+}
+.feature-text h1 {
+   
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #f5a81c;
+    }
+.feature-text p {
+padding: 0 20px;
+text-align: initial;
+font-size: 20px;
+text-align: justify;
+}
+@media screen and (max-width: 770px) {
+.title-text h1 {
+font-size: 35px;
+} 
+.features {
+flex-basis: 100%;
+} 
+.features-img {
+flex-basis: 100%;
+}
+ .features-img img {
+width: 100%;
+}
+}
+
