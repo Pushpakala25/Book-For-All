@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CategoryService {
-
+record:any;
   constructor(private http: HttpClient) { }
 
   url_ = "assets/book.json";
@@ -13,4 +13,9 @@ export class CategoryService {
   getAll():any{
     return this.http.get<any>(this.url_);
   }
+
+  addrecord(x:any) {
+    return this.http.post<any>('http://localhost:2525/newlend', x);
+  }
+
 }

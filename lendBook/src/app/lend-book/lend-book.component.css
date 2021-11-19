@@ -390,6 +390,10 @@
     font-size: 18px;
 }
 
+.b-form input.ng-touched.ng-invalid {
+  border: solid red;
+}
+
 @media (max-width:750px){
     .b-form{
         margin: 20px;
