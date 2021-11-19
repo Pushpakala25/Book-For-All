@@ -78,71 +78,97 @@
 <div id="con" class="con">
     <div class="col-md-12">
 
-        <form class="b-form">
-            <h1 style="color: #f5a81c;text-align: center;">LEND BOOK</h1>
-            <hr>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="uname">Name:</label>
-                    <input type="text" class="form-control" id="uname" placeholder="Enter Name" name="uname" required>
+        <form class="b-form" (ngSubmit)="submit()">
+            <div [formGroup]="lendForm">
+                <h1 style="color: #f5a81c;text-align: center;">LEND BOOK</h1>
+                <hr>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="uname">Name:</label>
+                        <input type="text" formControlName="Name" class="form-control" id="uname"
+                            placeholder="Enter Name" name="uname">
+                        <div>
+                            <h6 style="color:red" *ngIf="Name.touched && Name.errors?.required">
+                               
+                            </h6>
+                            <h6 style="color:red" *ngIf="Name.errors?.minlength">
+                                
+                            </h6>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Enter email">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" formControlName="Email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Enter email">
+                        <div>
+                            <h6 style="color:red" *ngIf="Email.touched && Email.errors?.required">
+                                
+                            </h6>
+                            <h6 style="color:red" *ngIf="Email.touched && Email.errors?.pattern">
+                                *Email Id Format is Required
+                            </h6>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="cate">Category</label>
-                    <select class="form-control" [ngModelOptions]="{standalone:true}" [(ngModel)]="selectedCategory.id"
-                        (change)="onSelect($event.target)">
-                        <option value="0">-- select Category --</option>
-                        <option *ngFor="let cate of category?.category" [value]="cate.id">{{cate.name}}</option>
-                    </select>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="cate">Category</label>
+                        <select class="form-control" formControlName="To_cate" [(ngModel)]="selectedCategory.id"
+                            (change)="onSelect($event.target)">
+                            <option value="0" selected disabled hidden>-- select Category --</option>
+                            <option *ngFor="let cate of category?.category" [value]="cate.id">{{cate.name}}</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="subcate">Book</label>
-                    <select class="form-control">
-                        <option value="0" readonly>-- select book --</option>
-                        <option *ngFor="let bk of book" [value]="bk.id">{{bk.name}}</option>
-                    </select>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="subcate">Book</label>
+                        <select class="form-control" formControlName="To_book">
+                            <option value="0" selected disabled hidden>-- select book --</option>
+                            <option *ngFor="let bk of book" [value]="bk.id">{{bk.name}}</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="control-label" for="date">Return Date</label>
-                    <input [(ngModel)]="n1" (change)="add()" class="form-control" id="date" name="date"
-                        placeholder="No.of days" type="date" />
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="country">Lended Date:</label>
-                    <input type="text" class="form-control" id="lendDate" name="lendDate"
-                        value="{{date|date:'MM-dd-yyyy'}}" readonly>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="country">Cost:</label>
-                    <input type="text" class="form-control" id="cost" name="cost" value="{{result|currency:'INR'}}"
-                        placeholder="Cost" readonly>
-                </div>
-            </div>
-            <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label" for="date">Return Date</label>
+                        <input [(ngModel)]="n1" (change)="add()" formControlName="rcal" class="form-control" id="date"
+                            name="date" placeholder="No.of days" type="date" />
+                            <div>
+                                <h6 style="color:red" *ngIf="rcal.touched && rcal.errors?.required">* Return                                   
+                                </h6>                              
+                            </div>
 
-            <div class="col-md-12" style="margin-top: 25px;text-align: center;">
-                <button type="submit" class="btn btn-warning"
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="country">Lended Date:</label>
+                        <input type="text" class="form-control" id="lendDate" name="lendDate"
+                            value="{{date|date:'MM-dd-yyyy'}}" readonly>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="country">Cost:</label>
+                        <input type="text" class="form-control" formControlName="price" id="cost" name="cost"
+                            value="{{result|currency:'INR'}}" placeholder="Cost" readonly>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+
+                <div class="col-md-12" style="margin-top: 25px;text-align: center;">
+                    <button type="submit" class="btn btn-warning" (click)="onSave()"
                     style="margin-right: 10px; border-radius: 20px;background-color: #f5a81c;font-size: 20px;">Save</button>
 
-                <button type="submit" class="btn btn-warning"
-                    style="border-radius: 20px;background-color: #f5a81c;font-size: 20px;">Submit</button>
+                    <button type="submit" class="btn btn-warning" 
+                        style="border-radius: 20px;background-color: #f5a81c;font-size: 20px;"
+                        [disabled]="!lendForm.valid">Submit</button>
+                </div>
             </div>
         </form>
     </div>
