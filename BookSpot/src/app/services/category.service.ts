@@ -18,4 +18,8 @@ record:any;
     return this.http.post<any>('http://localhost:2525/newlend', x);
   }
 
+  getAllUser() {
+    return this.http.get('http://localhost:2525/view');
+  }
+
 }
