@@ -153,7 +153,7 @@
 
   .row-1 {
     border-width: 0px;
-    border-left: 3px solid #f9ec8f;
+    border-left: 3px solid #f5a81c;
     width: 75%;
     margin-left: 15%;
     margin-top: 10%;
@@ -388,6 +388,16 @@
 .b-form input{
     color: #f5a81c;
     font-size: 18px;
+}
+
+.b-form input:focus{
+  border-color: #f5a81c;
+}
+
+
+
+.b-form select:focus{
+  border-color: #f5a81c;
 }
 
 .b-form input.ng-touched.ng-invalid {
