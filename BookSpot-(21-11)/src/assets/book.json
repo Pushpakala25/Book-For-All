@@ -1,0 +1,97 @@
+{
+    "category":[
+        {
+            "id": 1,
+            "name": "Science fiction"
+        },
+        {
+            "id": 2,
+            "name": "Horror"
+        },
+        {
+            "id": 3,
+            "name": "Thriller"
+        },
+        {
+            "id":4,
+            "name":"Romance"
+        },       
+        {
+            "id":5,
+            "name":"Fairytale"
+        }        
+    ],
+    "books":[
+        {
+            "id":1,
+            "name":"Frankenstein by Mary Shelley",
+            "cate_id":2
+        },
+        {
+            "id":2,
+            "name":"Dune",
+            "cate_id":1
+        },
+        {
+            "id":3,
+            "name":"The Martian",
+            "cate_id":1
+        }
+        ,
+        {
+            "id":4,
+            "name":"The War of the Worlds",
+            "cate_id":1
+        },
+        {
+            "id":5,
+            "name":"Hell House",
+            "cate_id":2
+        },
+        {
+            "id":6,
+            "name":"The Turn of the Screw",
+            "cate_id":2
+        },
+        {
+            "id":7,
+            "name":"Ghost Story",
+            "cate_id":2
+        },
+        {
+            "id":8,
+            "name":"Gone Girl",
+            "cate_id":3
+        },
+        {
+            "id":9,
+            "name":"Before I Go to Sleep",
+            "cate_id":3
+        },
+        {
+            "id":10,
+            "name":"The Notebook",
+            "cate_id":4
+        },
+        {
+            "id":11,
+            "name":"The Wish",
+            "cate_id":4
+        },
+        {
+            "id":12,
+            "name":"Snow White",
+            "cate_id":5
+        },
+        {
+            "id":13,
+            "name":"The Frog Prince",
+            "cate_id":5
+        },
+        {
+            "id":14,
+            "name":"Cinder",
+            "cate_id":5
+        }
+    ]
+}
