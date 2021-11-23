@@ -57,14 +57,7 @@ app.post('/newlend',(req,res)=>{
                                 (err, data) => {
                                     res.send(data)
                                 }
-                            )
-                            // db.collection(('user_tbl').updateOne(
-                            //     { Email: req.body.Email },
-                            //     { $set: req.body },
-                            //     (err, data) => {
-                            //          res.send(data)
-                            //     }
-                            // ))
+                            )                           
                         }
                     })
                     // res.send('you already lended a book.');
@@ -96,21 +89,6 @@ app.patch('/updateStatus/:id', (req, res) => {
         )
     })
 })
-// app.put("/updateStatus/:id", (req, res) => {
-//     MongoClient.connect(url, function (err, conn) {
-//         var db = conn.db("book_db");
-//             db.collection("user_tbl").updateOne(
-//                 { _id: ObjectId(req.params.id) },
-//                 {
-//                     $set: {    
-//                         status: Boolean(0)                       
-//                     }
-//                 }, (err, data) => {
-//                     res.send(data)
-//             })
-//     })
-// })
-
 
 app.delete('/Delete/:id', (req, res) => {
     MongoClient.connect(url, (err, conn) => {
